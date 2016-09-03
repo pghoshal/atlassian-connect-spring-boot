@@ -1,0 +1,12 @@
+{
+  "key": "atlassian-connect-spring-boot-jira-rest-test",
+  "baseUrl": "http://localhost:${local.server.port}",
+  "name": "Atlassian Connect Spring Boot JIRA REST Test",
+  "authentication": {
+    "type": "jwt"
+  },
+  "lifecycle": {
+    "installed": "/installed",
+    "uninstalled": "/uninstalled"
+  }
+}

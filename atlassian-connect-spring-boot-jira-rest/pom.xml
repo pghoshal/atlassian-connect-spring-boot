@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.atlassian.connect</groupId>
+        <artifactId>atlassian-connect-spring-boot</artifactId>
+        <version>1.0.1-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>atlassian-connect-spring-boot-jira-rest</artifactId>
+
+    <name>Atlassian Connect Spring Boot JIRA REST</name>
+    <description>Provides integration with JIRA REST Java Client for Spring Boot</description>
+
+    <repositories>
+        <repository>
+            <id>atlassian-public</id>
+            <url>https://maven.atlassian.com/repository/public</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>atlassian-connect-spring-boot-api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.atlassian.jira</groupId>
+            <artifactId>jira-rest-java-client-core</artifactId>
+            <version>${jira-rest-java-client.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-beans</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.atlassian.sal</groupId>
+                    <artifactId>sal-api</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.atlassian.event</groupId>
+                    <artifactId>atlassian-event</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.atlassian.fugue</groupId>
+            <artifactId>fugue</artifactId>
+            <version>1.1</version>
+        </dependency>
+    </dependencies>
+
+    <properties>
+        <jira-rest-java-client.version>4.0.0</jira-rest-java-client.version>
+    </properties>
+</project>

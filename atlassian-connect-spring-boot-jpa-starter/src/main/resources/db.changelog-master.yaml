@@ -1,0 +1,54 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1.0.1
+      author: atlassian
+      changes:
+        - createTable:
+            tableName: atlassian_host
+            columns:
+              - column:
+                  name: client_key
+                  type: varchar(255)
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: public_key
+                  type: varchar(255)
+              - column:
+                  name: shared_secret
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: base_url
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: product_type
+                  type: varchar(255)
+              - column:
+                  name: description
+                  type: varchar(255)
+              - column:
+                  name: service_entitlement_number
+                  type: varchar(255)
+              - column:
+                  name: addon_installed
+                  type: boolean
+              - column:
+                  name: created_date
+                  type: datetime
+              - column:
+                  name: last_modified_date
+                  type: datetime
+              - column:
+                  name: created_by
+                  type: varchar(255)
+              - column:
+                  name: last_modified_by
+                  type: varchar(255)
+  - includeAll:
+        path: classpath*:db/changelog
+        errorIfMissingOrEmpty: false

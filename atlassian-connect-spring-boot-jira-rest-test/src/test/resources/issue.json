@@ -1,0 +1,553 @@
+{
+  "expand": "renderedFields,names,schema,transitions,operations,editmeta,changelog,versionedRepresentations",
+  "id": "10000",
+  "self": "https://example.com/rest/api/latest/issue/10000",
+  "key": "TEST-1",
+  "names": {
+    "issuetype": "Issue Type",
+    "timespent": "Time Spent",
+    "project": "Project",
+    "fixVersions": "Fix Version/s",
+    "aggregatetimespent": "Σ Time Spent",
+    "resolution": "Resolution",
+    "resolutiondate": "Resolved",
+    "workratio": "Work Ratio",
+    "lastViewed": "Last Viewed",
+    "watches": "Watchers",
+    "created": "Created",
+    "customfield_10020": "Capture for JIRA Operating System",
+    "customfield_10021": "Capture for JIRA URL",
+    "customfield_10022": "Capture for JIRA Screen Resolution",
+    "priority": "Priority",
+    "customfield_10023": "Capture for JIRA jQuery Version",
+    "customfield_10024": "Capture for JIRA Document Mode",
+    "customfield_10025": "Testing status",
+    "labels": "Labels",
+    "customfield_10026": "Team",
+    "customfield_10016": "Test sessions",
+    "customfield_10017": "Raised during",
+    "customfield_10018": "Capture for JIRA User Agent",
+    "customfield_10019": "Capture for JIRA Browser",
+    "timeestimate": "Remaining Estimate",
+    "aggregatetimeoriginalestimate": "Σ Original Estimate",
+    "versions": "Affects Version/s",
+    "issuelinks": "Linked Issues",
+    "assignee": "Assignee",
+    "updated": "Updated",
+    "status": "Status",
+    "components": "Component/s",
+    "timeoriginalestimate": "Original Estimate",
+    "description": "Description",
+    "customfield_10010": "Customer Request Type",
+    "customfield_10011": "Request participants",
+    "customfield_10012": "Satisfaction",
+    "customfield_10013": "Satisfaction date",
+    "customfield_10014": "Account",
+    "timetracking": "Time Tracking",
+    "customfield_10015": "Iteration",
+    "attachment": "Attachment",
+    "customfield_10009": "Approvals",
+    "aggregatetimeestimate": "Σ Remaining Estimate",
+    "summary": "Summary",
+    "creator": "Creator",
+    "subtasks": "Sub-tasks",
+    "reporter": "Reporter",
+    "customfield_10000": "[CHART] Date of First Response",
+    "aggregateprogress": "Σ Progress",
+    "customfield_10001": "[CHART] Time in Status",
+    "customfield_10002": "Rank",
+    "customfield_10003": "Sprint",
+    "customfield_10004": "Epic Link",
+    "environment": "Environment",
+    "duedate": "Due Date",
+    "progress": "Progress",
+    "comment": "Comment",
+    "votes": "Votes",
+    "worklog": "Log Work"
+  },
+  "schema": {
+    "issuetype": {
+      "type": "issuetype",
+      "system": "issuetype"
+    },
+    "timespent": {
+      "type": "number",
+      "system": "timespent"
+    },
+    "project": {
+      "type": "project",
+      "system": "project"
+    },
+    "fixVersions": {
+      "type": "array",
+      "items": "version",
+      "system": "fixVersions"
+    },
+    "aggregatetimespent": {
+      "type": "number",
+      "system": "aggregatetimespent"
+    },
+    "resolution": {
+      "type": "resolution",
+      "system": "resolution"
+    },
+    "resolutiondate": {
+      "type": "datetime",
+      "system": "resolutiondate"
+    },
+    "workratio": {
+      "type": "number",
+      "system": "workratio"
+    },
+    "lastViewed": {
+      "type": "datetime",
+      "system": "lastViewed"
+    },
+    "watches": {
+      "type": "watches",
+      "system": "watches"
+    },
+    "created": {
+      "type": "datetime",
+      "system": "created"
+    },
+    "customfield_10020": {
+      "type": "string",
+      "custom": "com.atlassian.bonfire.plugin:bonfire-text",
+      "customId": 10020
+    },
+    "customfield_10021": {
+      "type": "string",
+      "custom": "com.atlassian.bonfire.plugin:bonfire-text",
+      "customId": 10021
+    },
+    "customfield_10022": {
+      "type": "string",
+      "custom": "com.atlassian.bonfire.plugin:bonfire-text",
+      "customId": 10022
+    },
+    "priority": {
+      "type": "priority",
+      "system": "priority"
+    },
+    "customfield_10023": {
+      "type": "string",
+      "custom": "com.atlassian.bonfire.plugin:bonfire-text",
+      "customId": 10023
+    },
+    "customfield_10024": {
+      "type": "string",
+      "custom": "com.atlassian.bonfire.plugin:bonfire-text",
+      "customId": 10024
+    },
+    "customfield_10025": {
+      "type": "any",
+      "custom": "com.atlassian.bonfire.plugin:bonfire-testing-status-cft",
+      "customId": 10025
+    },
+    "labels": {
+      "type": "array",
+      "items": "string",
+      "system": "labels"
+    },
+    "customfield_10026": {
+      "type": "string",
+      "custom": "com.tempoplugin.tempo-teams:team.customfield",
+      "customId": 10026
+    },
+    "customfield_10016": {
+      "type": "string",
+      "custom": "com.atlassian.bonfire.plugin:bonfire-multi-session-cft",
+      "customId": 10016
+    },
+    "customfield_10017": {
+      "type": "string",
+      "custom": "com.atlassian.bonfire.plugin:bonfire-session-cft",
+      "customId": 10017
+    },
+    "customfield_10018": {
+      "type": "string",
+      "custom": "com.atlassian.bonfire.plugin:bonfire-text",
+      "customId": 10018
+    },
+    "customfield_10019": {
+      "type": "string",
+      "custom": "com.atlassian.bonfire.plugin:bonfire-text",
+      "customId": 10019
+    },
+    "timeestimate": {
+      "type": "number",
+      "system": "timeestimate"
+    },
+    "aggregatetimeoriginalestimate": {
+      "type": "number",
+      "system": "aggregatetimeoriginalestimate"
+    },
+    "versions": {
+      "type": "array",
+      "items": "version",
+      "system": "versions"
+    },
+    "issuelinks": {
+      "type": "array",
+      "items": "issuelinks",
+      "system": "issuelinks"
+    },
+    "assignee": {
+      "type": "user",
+      "system": "assignee"
+    },
+    "updated": {
+      "type": "datetime",
+      "system": "updated"
+    },
+    "status": {
+      "type": "status",
+      "system": "status"
+    },
+    "components": {
+      "type": "array",
+      "items": "component",
+      "system": "components"
+    },
+    "timeoriginalestimate": {
+      "type": "number",
+      "system": "timeoriginalestimate"
+    },
+    "description": {
+      "type": "string",
+      "system": "description"
+    },
+    "customfield_10010": {
+      "type": "sd-customerrequesttype",
+      "custom": "com.atlassian.servicedesk:vp-origin",
+      "customId": 10010
+    },
+    "customfield_10011": {
+      "type": "array",
+      "items": "user",
+      "custom": "com.atlassian.servicedesk:sd-request-participants",
+      "customId": 10011
+    },
+    "customfield_10012": {
+      "type": "any",
+      "custom": "com.atlassian.servicedesk:sd-request-feedback",
+      "customId": 10012
+    },
+    "customfield_10013": {
+      "type": "datetime",
+      "custom": "com.atlassian.servicedesk:sd-request-feedback-date",
+      "customId": 10013
+    },
+    "customfield_10014": {
+      "type": "account",
+      "custom": "com.tempoplugin.tempo-accounts:accounts.customfield",
+      "customId": 10014
+    },
+    "timetracking": {
+      "type": "timetracking",
+      "system": "timetracking"
+    },
+    "customfield_10015": {
+      "type": "string",
+      "custom": "com.tempoplugin.tempo-plan-core:tp.iteration.customfield",
+      "customId": 10015
+    },
+    "attachment": {
+      "type": "array",
+      "items": "attachment",
+      "system": "attachment"
+    },
+    "customfield_10009": {
+      "type": "any",
+      "custom": "com.atlassian.servicedesk.approvals-plugin:sd-approvals",
+      "customId": 10009
+    },
+    "aggregatetimeestimate": {
+      "type": "number",
+      "system": "aggregatetimeestimate"
+    },
+    "summary": {
+      "type": "string",
+      "system": "summary"
+    },
+    "creator": {
+      "type": "user",
+      "system": "creator"
+    },
+    "subtasks": {
+      "type": "array",
+      "items": "issuelinks",
+      "system": "subtasks"
+    },
+    "reporter": {
+      "type": "user",
+      "system": "reporter"
+    },
+    "customfield_10000": {
+      "type": "datetime",
+      "custom": "com.atlassian.jira.ext.charting:firstresponsedate",
+      "customId": 10000
+    },
+    "aggregateprogress": {
+      "type": "progress",
+      "system": "aggregateprogress"
+    },
+    "customfield_10001": {
+      "type": "any",
+      "custom": "com.atlassian.jira.ext.charting:timeinstatus",
+      "customId": 10001
+    },
+    "customfield_10002": {
+      "type": "any",
+      "custom": "com.pyxis.greenhopper.jira:gh-lexo-rank",
+      "customId": 10002
+    },
+    "customfield_10003": {
+      "type": "array",
+      "items": "string",
+      "custom": "com.pyxis.greenhopper.jira:gh-sprint",
+      "customId": 10003
+    },
+    "customfield_10004": {
+      "type": "any",
+      "custom": "com.pyxis.greenhopper.jira:gh-epic-link",
+      "customId": 10004
+    },
+    "environment": {
+      "type": "string",
+      "system": "environment"
+    },
+    "duedate": {
+      "type": "date",
+      "system": "duedate"
+    },
+    "progress": {
+      "type": "progress",
+      "system": "progress"
+    },
+    "comment": {
+      "type": "comments-page",
+      "system": "comment"
+    },
+    "votes": {
+      "type": "votes",
+      "system": "votes"
+    },
+    "worklog": {
+      "type": "array",
+      "items": "worklog",
+      "system": "worklog"
+    }
+  },
+  "transitions": [
+    {
+      "id": "11",
+      "name": "To Do",
+      "to": {
+        "self": "https://example.com/rest/api/2/status/10000",
+        "description": "",
+        "iconUrl": "https://example.com/",
+        "name": "To Do",
+        "id": "10000",
+        "statusCategory": {
+          "self": "https://example.com/rest/api/2/statuscategory/2",
+          "id": 2,
+          "key": "new",
+          "colorName": "blue-gray",
+          "name": "To Do"
+        }
+      },
+      "hasScreen": false
+    },
+    {
+      "id": "21",
+      "name": "In Progress",
+      "to": {
+        "self": "https://example.com/rest/api/2/status/3",
+        "description": "This issue is being actively worked on at the moment by the assignee.",
+        "iconUrl": "https://example.com/images/icons/statuses/inprogress.png",
+        "name": "In Progress",
+        "id": "3",
+        "statusCategory": {
+          "self": "https://example.com/rest/api/2/statuscategory/4",
+          "id": 4,
+          "key": "indeterminate",
+          "colorName": "yellow",
+          "name": "In Progress"
+        }
+      },
+      "hasScreen": false
+    },
+    {
+      "id": "31",
+      "name": "Done",
+      "to": {
+        "self": "https://example.com/rest/api/2/status/10001",
+        "description": "",
+        "iconUrl": "https://example.com/",
+        "name": "Done",
+        "id": "10001",
+        "statusCategory": {
+          "self": "https://example.com/rest/api/2/statuscategory/3",
+          "id": 3,
+          "key": "done",
+          "colorName": "green",
+          "name": "Done"
+        }
+      },
+      "hasScreen": false
+    }
+  ],
+  "fields": {
+    "issuetype": {
+      "self": "https://example.com/rest/api/2/issuetype/10002",
+      "id": "10002",
+      "description": "A task that needs to be done.",
+      "iconUrl": "https://example.com/secure/viewavatar?size=xsmall&avatarId=10318&avatarType=issuetype",
+      "name": "Task",
+      "subtask": false,
+      "avatarId": 10318
+    },
+    "timespent": null,
+    "project": {
+      "self": "https://example.com/rest/api/2/project/10100",
+      "id": "10100",
+      "key": "TEST",
+      "name": "TEST",
+      "avatarUrls": {
+        "48x48": "https://example.com/secure/projectavatar?avatarId=10324",
+        "24x24": "https://example.com/secure/projectavatar?size=small&avatarId=10324",
+        "16x16": "https://example.com/secure/projectavatar?size=xsmall&avatarId=10324",
+        "32x32": "https://example.com/secure/projectavatar?size=medium&avatarId=10324"
+      }
+    },
+    "fixVersions": [],
+    "aggregatetimespent": null,
+    "resolution": null,
+    "resolutiondate": null,
+    "workratio": -1,
+    "lastViewed": "2016-08-19T15:47:43.546+1000",
+    "watches": {
+      "self": "https://example.com/rest/api/2/issue/TEST-1/watchers",
+      "watchCount": 1,
+      "isWatching": true
+    },
+    "created": "2016-08-19T15:47:40.577+1000",
+    "customfield_10020": null,
+    "customfield_10021": null,
+    "customfield_10022": null,
+    "priority": {
+      "self": "https://example.com/rest/api/2/priority/3",
+      "iconUrl": "https://example.com/images/icons/priorities/medium.svg",
+      "name": "Medium",
+      "id": "3"
+    },
+    "customfield_10023": null,
+    "customfield_10024": null,
+    "customfield_10025": "Not started",
+    "labels": [],
+    "customfield_10026": null,
+    "customfield_10016": null,
+    "customfield_10017": null,
+    "customfield_10018": null,
+    "customfield_10019": null,
+    "timeestimate": null,
+    "aggregatetimeoriginalestimate": null,
+    "versions": [],
+    "issuelinks": [],
+    "assignee": null,
+    "updated": "2016-08-19T15:47:40.577+1000",
+    "status": {
+      "self": "https://example.com/rest/api/2/status/10000",
+      "description": "",
+      "iconUrl": "https://example.com/",
+      "name": "To Do",
+      "id": "10000",
+      "statusCategory": {
+        "self": "https://example.com/rest/api/2/statuscategory/2",
+        "id": 2,
+        "key": "new",
+        "colorName": "blue-gray",
+        "name": "To Do"
+      }
+    },
+    "components": [],
+    "timeoriginalestimate": null,
+    "description": null,
+    "customfield_10010": null,
+    "customfield_10011": [],
+    "customfield_10012": null,
+    "customfield_10013": null,
+    "customfield_10014": null,
+    "timetracking": {},
+    "customfield_10015": null,
+    "attachment": [],
+    "customfield_10009": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@1b3df10",
+    "aggregatetimeestimate": null,
+    "summary": "Test",
+    "creator": {
+      "self": "https://example.com/rest/api/2/user?username=admin",
+      "name": "admin",
+      "key": "admin",
+      "emailAddress": "charlie@atlassian.com",
+      "avatarUrls": {
+        "48x48": "https://design.atlassian.com/images/brand/logo-02.png",
+        "24x24": "https://design.atlassian.com/images/brand/logo-02.png",
+        "16x16": "https://design.atlassian.com/images/brand/logo-02.png",
+        "32x32": "https://design.atlassian.com/images/brand/logo-02.png"
+      },
+      "displayName": "Charlie",
+      "active": true,
+      "timeZone": "Australia/Sydney"
+    },
+    "subtasks": [],
+    "reporter": {
+      "self": "https://example.com/rest/api/2/user?username=admin",
+      "name": "admin",
+      "key": "admin",
+      "emailAddress": "charlie@atlassian.com",
+      "avatarUrls": {
+        "48x48": "https://design.atlassian.com/images/brand/logo-02.png",
+        "24x24": "https://design.atlassian.com/images/brand/logo-02.png",
+        "16x16": "https://design.atlassian.com/images/brand/logo-02.png",
+        "32x32": "https://design.atlassian.com/images/brand/logo-02.png"
+      },
+      "displayName": "Charlie",
+      "active": true,
+      "timeZone": "Australia/Sydney"
+    },
+    "customfield_10000": null,
+    "aggregateprogress": {
+      "progress": 0,
+      "total": 0
+    },
+    "customfield_10001": null,
+    "customfield_10002": "0|i0003b:",
+    "customfield_10003": null,
+    "customfield_10004": null,
+    "environment": null,
+    "duedate": null,
+    "progress": {
+      "progress": 0,
+      "total": 0
+    },
+    "comment": {
+      "comments": [],
+      "maxResults": 0,
+      "total": 0,
+      "startAt": 0
+    },
+    "votes": {
+      "self": "https://example.com/rest/api/2/issue/TEST-1/votes",
+      "votes": 0,
+      "hasVoted": false
+    },
+    "worklog": {
+      "startAt": 0,
+      "maxResults": 20,
+      "total": 0,
+      "worklogs": []
+    }
+  }
+}

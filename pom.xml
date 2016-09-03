@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>pom</packaging>
+
+    <parent>
+        <groupId>com.atlassian.pom</groupId>
+        <artifactId>central-pom</artifactId>
+        <version>4.0.18</version>
+    </parent>
+
+    <groupId>com.atlassian.connect</groupId>
+    <artifactId>atlassian-connect-spring-boot</artifactId>
+    <version>1.0.1-SNAPSHOT</version>
+
+    <name>Atlassian Connect Spring Boot</name>
+    <description>Provides support for Atlassian Connect add-ons using Spring Boot</description>
+    <url>https://bitbucket.org/atlassian/atlassian-connect-spring-boot</url>
+
+    <scm>
+        <url>https://bitbucket.org/atlassian/atlassian-connect-spring-boot</url>
+        <connection>scm:git:ssh://git@bitbucket.org/atlassian/atlassian-connect-spring-boot.git</connection>
+        <developerConnection>scm:git:ssh://git@bitbucket.org/atlassian/atlassian-connect-spring-boot.git</developerConnection>
+      <tag>HEAD</tag>
+  </scm>
+
+    <issueManagement>
+        <system>JIRA</system>
+        <url>https://ecosystem.atlassian.net/browse/ACSPRING</url>
+    </issueManagement>
+
+    <developers>
+        <developer>
+            <organization>Atlassian</organization>
+        </developer>
+    </developers>
+
+    <modules>
+        <module>atlassian-connect-spring-boot-api</module>
+        <module>atlassian-connect-spring-boot-core</module>
+        <module>atlassian-connect-spring-boot-jwt</module>
+        <module>atlassian-connect-spring-boot-starter</module>
+        <module>atlassian-connect-spring-boot-jpa-starter</module>
+        <module>atlassian-connect-spring-boot-test</module>
+        <module>atlassian-connect-spring-boot-conditional-test</module>
+        <module>atlassian-connect-spring-boot-jira-rest</module>
+        <module>atlassian-connect-spring-boot-jira-rest-test</module>
+        <module>atlassian-connect-spring-boot-archetype</module>
+    </modules>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <configuration>
+                        <compilerArgs>
+                            <arg>-Xlint:unchecked</arg>
+                            <arg>-Werror</arg>
+                        </compilerArgs>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <properties>
+        <nexus.staging.autoRelease>false</nexus.staging.autoRelease>
+
+        <!-- Spring versions -->
+        <spring-boot.version>1.3.5.RELEASE</spring-boot.version>
+
+        <!-- Other versions -->
+        <nimbus-jose-jwt.version>3.6</nimbus-jose-jwt.version>
+        <commons-lang3.version>3.4</commons-lang3.version>
+    </properties>
+
+</project>

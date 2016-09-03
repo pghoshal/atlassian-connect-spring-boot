@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.atlassian.connect.spring.internal.AtlassianConnectAutoConfiguration,\
+  com.atlassian.connect.spring.internal.AtlassianConnectWebMvcAutoConfiguration

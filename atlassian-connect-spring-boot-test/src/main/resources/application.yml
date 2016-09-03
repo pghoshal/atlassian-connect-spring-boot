@@ -1,0 +1,25 @@
+spring.main.banner_mode: "off"
+
+server.port: 8081
+
+security:
+  user:
+    name: admin
+    password: secret
+  ignored: /no-auth
+
+spring.jpa.hibernate.ddl-auto: none
+
+add-on:
+  key: atlassian-connect-spring-boot-test
+  name: Atlassian Connect Spring Boot Example
+
+hello-world:
+  installed-url: /hello-installed
+  uninstalled-url: /hello-uninstalled
+
+---
+
+spring.profiles: config-test
+
+management.context-path: /override

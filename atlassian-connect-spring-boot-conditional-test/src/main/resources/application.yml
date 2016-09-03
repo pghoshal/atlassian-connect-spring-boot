@@ -1,0 +1,5 @@
+spring.main.banner_mode: "off"
+
+server.port: 8081
+
+liquibase.enabled: false

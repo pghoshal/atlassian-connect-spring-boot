@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Add-on metadata</title>
+    <link rel="stylesheet" href="//aui-cdn.atlassian.com/aui-adg/5.9.17/css/aui.min.css" media="all"/>
+    <link rel="stylesheet" href="//aui-cdn.atlassian.com/aui-adg/5.9.17/css/aui-experimental.min.css" media="all"/>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="//aui-cdn.atlassian.com/aui-adg/5.9.17/js/aui.min.js"></script>
+    <script src="//aui-cdn.atlassian.com/aui-adg/5.9.17/js/aui-datepicker.min.js"></script>
+    <script src="//aui-cdn.atlassian.com/aui-adg/5.9.17/js/aui-experimental.min.js"></script>
+    <script src="//aui-cdn.atlassian.com/aui-adg/5.9.17/js/aui-soy.min.js"></script>
+    <script src="$atlassian-connect-all-js-url" type="text/javascript"></script>
+</head>
+<body>
+<div class="ac-content">
+    <div class="aui-page-panel main-panel">
+        <div class="aui-page-panel-inner">
+            <section class="aui-page-panel-item">
+                <div class="aui-group">
+                    <div class="aui-item">
+                        <pre><code>$addon</code></pre>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+{
+  "key": "${add-on.key}",
+  "baseUrl": "http://localhost:8081",
+  "name": "${add-on.name}",
+  "authentication": {
+    "type": "jwt"
+  },
+  "lifecycle": {
+    "installed": "${hello-world.installed-url}",
+    "uninstalled": "${hello-world.uninstalled-url}"
+  },
+  "modules": {
+    "generalPages": [
+      {
+        "key": "hello-world-page-jira",
+        "location": "system.top.navigation.bar",
+        "name": {
+          "value": "Hello World"
+        },
+        "url": "/addon",
+        "conditions": [
+          {
+            "condition": "user_is_logged_in"
+          }
+        ]
+      },
+      {
+        "key": "hello-world-page-confluence",
+        "location": "system.header/left",
+        "name": {
+          "value": "Hello World"
+        },
+        "url": "/addon",
+        "conditions": [
+          {
+            "condition": "user_is_logged_in"
+          }
+        ]
+      }
+    ]
+  }
+}

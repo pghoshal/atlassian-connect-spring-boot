@@ -1,0 +1,2 @@
+spring.jpa.hibernate.ddl-auto: update
+spring.datasource.url: jdbc:hsqldb:file:addon-db # Use a file-based backing store for HSQL

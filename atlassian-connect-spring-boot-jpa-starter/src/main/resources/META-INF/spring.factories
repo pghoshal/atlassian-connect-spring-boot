@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.atlassian.connect.spring.internal.jpa.AtlassianJpaAutoConfiguration
